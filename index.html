@@ -1,10 +1,77 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>T-Shirt Order Form</title>
   </head>
-  <body></body>
+  <body>
+    <div class="container-form">
+      <h1 class="titulo">T-Shirt Order Form</h1>
+      <form action="">
+          <div class="datosPersonales">
+            <label for="nombre">Nombre</label>
+            <input class="input datos" type="text" name="nombre" id="nombre" required>
+            <label for="direccion">Dirección</label>
+            <input class="input datos" type="text" name="direccion" id="direccion" required>
+          </div>
+          <div class="selectores">
+            <div class="select">
+              <label id="select_size" class="etiqueta" for="talla"
+                >Select size</label
+              >
+              <select id="select_talla" class="selector" name="talla">
+                <option value="M" selected>M</option>
+                <option value="S">S</option>
+                <option value="L">L</option>
+                <option value="XL">XL</option>
+              </select>
+              <a href="#">Size guida</a>
+            </div>
+            <div class="select">
+              <label class="etiqueta" for="colores">Select color</label>
+              <div class="colores">
+                <input type="radio" checked name="colores" value="Blanco" id="blanco" />
+                <div class="color blanco"></div>
+                <input type="radio" name="colores" value="Negro" id="negro" />
+                <div class="color negro"></div>
+                <input type="radio" name="colores" value="Rojo" id="rojo" />
+                <div class="color rojo"></div>
+              </div>
+            </div>
+            <div class="select">
+              <label class="etiqueta" for="cantidad">Qty</label>
+              <input class="input" min="1" max="100" type="number" name="cantidad" required id="cantidad" />
+            </div>
+          </div>
+          <label class="poleras" for="design"
+            >Please choose your favorite design:</label
+          >
+          <div class="design">
+            <div class="imagenes">
+              <input id="polera1" type="radio" name="polera" value="A1" checked />
+              <img
+                src="./assets/D_NQ_NP_759468-MLC41068457603_032020-W.jpg"
+                alt="polera"
+              />
+            </div>
+            <div class="imagenes">
+              <input id="polera2"  type="radio" name="polera" value="A2" />
+              <img
+                src="./assets/D_NQ_NP_859699-MLC48030578919_102021-W.jpg"
+                alt="polera"
+              />
+            </div>
+            <div class="imagenes">
+              <input id="polera3"  type="radio" name="polera" value="A3" />
+              <img src="./assets/Polera-Catrina-Time-Blanca.jpg" alt="polera" />
+            </div>
+          </div>
+          <input class="boton" type="submit" value="Confirmar" onclick="">
+      </form>
+    </div>
+    <script src="./js/funciones.js"></script>
+  </body>
 </html>
