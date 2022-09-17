@@ -1,32 +1,7 @@
-:root {
-  --color-link: #23c0c0;
-  --color-white: #ffffff;
-  --color-gray: #8b8c94;
-  --color-blue: #0372f2;
-  --font-size: 14px;
-  --font-size-m: 18px;
-  --font-size-l: 27px;
-  --font-size-xl: 42px;
-  --font-size-xxl: 58px;
-  --mobile-font-size-m: 16px;
-  --mobile-font-size-l: 20px;
-  --mobile-font-size-xl: 32px;
-  --mobile-font-size-xxl: 32px;
-}
 /*GLOBAL*/
-html {
-  box-sizing: border-box;
-}
-*,
-*::after,
-*::before {
-  box-sizing: inherit;
-}
-body {
-  font-family: Roboto, sans-serif;
-}
 .confirmation {
   position: absolute;
+  top: 0;
   z-index: 10;
   background-color: #071f1fb3;
   color: var(--black-color);

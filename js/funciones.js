@@ -11,12 +11,10 @@ document
     let quantityN = quantityNew.value;
 
     if (quantityN !== "" && quantityN !== "0") {
-      // let product = {};
       let product = [];
 
       let sizeNew = document.getElementById("select_talla");
       let sizeN = sizeNew.value;
-      // product["talla"] = sizeN;
       product.push(sizeN);
 
       let designN;
@@ -27,7 +25,6 @@ document
       } else if (document.getElementById("polera3").checked) {
         designN = polera3.value;
       }
-      // product["disenio"] = designN;
       product.push(designN);
 
       let colorN;
@@ -38,15 +35,10 @@ document
       } else if (document.getElementById("rojo").checked) {
         colorN = rojo.value;
       }
-      // product["color"] = colorN;
       product.push(colorN);
 
-      // let quantityNew = document.getElementById("cantidad");
-      // let quantityN = quantityNew.value;
-      // product["cantidad"] = quantityN;
       product.push(quantityN);
 
-      // product["precio"] = 15;
       let precio = 13.99;
       product.push(precio);
 
@@ -62,17 +54,6 @@ document
       alert("Ingrese una cantidad de prenda por favor!");
     }
   });
-// console.log(products);
-// let pedidos = [];
-// function mmm() {
-//   for (let i = 0; i < products.length; i++) {
-//     const element = products[i];
-//     if (products) {
-//       pedidos.push(Object.values(element));
-//     }
-//   }
-//   console.log(pedidos);
-// }
 
 document.querySelector("#formulario").addEventListener("submit", (e) => {
   e.preventDefault();
@@ -87,10 +68,6 @@ document.querySelector("#formulario").addEventListener("submit", (e) => {
 
   let nombre = info.nombre;
   let direc = info.direccion;
-  // let talla = info.talla;
-  // let polera = info.polera;
-  // let colores = info.colores;
-  // let cantidad = info.cantidad;
 
   //actualiza datos
   let numeroOrden = Math.floor(Math.random() * 1000); //Generar el numero de pedido
@@ -113,26 +90,6 @@ document.querySelector("#formulario").addEventListener("submit", (e) => {
 
   let totalSum = 0;
 
-  // let size = document.getElementById("size");
-  // size.innerText = talla;
-
-  // let design = document.getElementById("design");
-  // design.innerText = polera;
-
-  // let color = document.getElementById("color");
-  // color.innerText = colores;
-
-  // let quantity = document.getElementById("quantity");
-  // quantity.innerText = cantidad;
-
-  // let dataTable = document.getElementById(dataTable);
-
-  // const p = document.createElement("p");
-  // let newContent = "Hola que tal";
-  // p.textContent = newContent; //añade texto al div creado.
-  // // añade el elemento creado y su contenido al DOM
-  // document.getElementById("dataTable").appendChild(p);
-
   for (let index = 0; index < products.length; index++) {
     let pedidoObj = products[index];
 
@@ -146,7 +103,7 @@ document.querySelector("#formulario").addEventListener("submit", (e) => {
         p.textContent = `£ ${newContent}`; //añade texto al div creado.
         document.getElementById("dataTable").appendChild(p);
       } else {
-        p.textContent = newContent; //añade texto al div creado.
+        p.textContent = newContent;
         document.getElementById("dataTable").appendChild(p);
       }
 
